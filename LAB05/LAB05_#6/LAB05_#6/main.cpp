@@ -9,22 +9,25 @@
 #include "QueType.h"
 
 int main(int argc, const char * argv[]) {
-    QueType q(10);
+    QueType q(6);
     int num;
-    q.Enqueue(10); //11
-    q.Enqueue(3); // 9
-    q.Enqueue(30);
-    q.Dequeue(num);
-    q.Dequeue(num);
-    q.Enqueue(10); //21
-    q.Enqueue(20);
-    
-    q.MinDequeue(num); //3
+    q.Enqueue(5);
+    q.Enqueue(7);
+    q.Enqueue(1);
+    q.Enqueue(3);
     q.Enqueue(9);
-    q.MinDequeue(num); //10
+    q.MinDequeue(num);
+    std::cout << num << std::endl; 
+    q.MinDequeue(num);
+    std::cout << num << std::endl;
+    q.MinDequeue(num);
+    std::cout << num << std::endl;
+    q.Enqueue(13);
+    q.MinDequeue(num);
+
     q.Enqueue(11);
-    q.MinDequeue(num); //10
-    q.Enqueue(21);
-    q.MinDequeue(num); //20
-    std::cout << num;
+    q.MinDequeue(num);
+    std::cout << num << std::endl;
+    q.MinDequeue(num);
+    std::cout << num << std::endl;
 }
