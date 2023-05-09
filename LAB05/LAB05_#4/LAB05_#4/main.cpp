@@ -17,6 +17,10 @@ int Length(QueType& qt) {
         temp_q.Enqueue(num);
         count++;
     }
+    while (!temp_q.IsEmpty()) { //다시 복원해줘야 함
+        temp_q.Dequeue(num);
+        qt.Enqueue(num);
+    }
     return count;
 }
 
@@ -37,10 +41,12 @@ int main(int argc, const char * argv[]) {
     q.Enqueue(1);
     q.Enqueue(2);
     q.Enqueue(3);
-    q.Enqueue(3); //IsFull
+    q.Enqueue(5); //IsFull
+//    q.Enqueue(5);
 
 
     std::cout << q.Length()<< std::endl;
-    std::cout <<Length(q) << std::endl;
+//    std::cout <<Length(q) << std::endl;
+    q.Print();
     
 }

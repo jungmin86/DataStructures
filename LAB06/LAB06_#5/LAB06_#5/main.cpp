@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     s.InsertItem(5);
     s.InsertItem(2);
     
-    s.DeleteItem(5);
+    s.DeleteItem(1);
     
     s.Print();
 }

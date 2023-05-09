@@ -16,10 +16,10 @@ void ReplaceItem(QueType& queue, ItemType oldItem, ItemType newItem)
     while(!queue.IsEmpty())
     {
         queue.Dequeue(num);
-        if(num == oldItem) temp_q.Enqueue(newItem);
-        else temp_q.Enqueue(num);
+        if(num == oldItem) temp_q.Enqueue(newItem); //같으면 바꿔서 넣는다.
+        else temp_q.Enqueue(num); //다르면 그대로 넣는다.
     }
-    while(!temp_q.IsEmpty()) {
+    while(!temp_q.IsEmpty()) { //역순으로 다시 넣어주기
         temp_q.Dequeue(num);
         queue.Enqueue(num);
         std::cout << num << " ";
@@ -38,7 +38,7 @@ int main() {
     queue.Enqueue(3);
     ReplaceItem(queue, 1, 8);
     
-    QueType que(6);
+    QueType que(7);
     que.MakeEmpty();
     que.Enqueue(1);
     que.Enqueue(2);
@@ -46,7 +46,7 @@ int main() {
     que.Enqueue(1);
     que.Enqueue(2);
     que.Enqueue(3);
-    que.ReplaceItem(1, 7);
+    que.ReplaceItem(1, 8);
     
     
 }

@@ -17,15 +17,15 @@ int main(int argc, const char * argv[]) {
     q.Enqueue(3);
     q.Enqueue(9);
     q.MinDequeue(num);
-    std::cout << num << std::endl; 
+    std::cout << num << std::endl;  //1
     q.MinDequeue(num);
-    std::cout << num << std::endl;
+    std::cout << num << std::endl; //3
     q.MinDequeue(num);
-    std::cout << num << std::endl;
+    std::cout << num << std::endl; //5
     q.Enqueue(13);
-    q.MinDequeue(num);
+    q.MinDequeue(num); 
 
-    q.Enqueue(11);
+    q.Enqueue(14);
     q.MinDequeue(num);
     std::cout << num << std::endl;
     q.MinDequeue(num);

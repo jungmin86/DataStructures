@@ -39,6 +39,6 @@ int main(int argc, const char * argv[]) {
     ss.Push(2);
     ss.Push(3);
 //    ReplaceItem(ss, 1, 4);
-//    ss.ReplaceItem(1, 4);
+    ss.ReplaceItem(1, 4);
     ss.ReversePrint();
 }

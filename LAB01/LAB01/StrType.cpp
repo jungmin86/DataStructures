@@ -154,3 +154,4 @@ int StrType::LengthIs()
 {
   return strlen(letters);
 }
+ 

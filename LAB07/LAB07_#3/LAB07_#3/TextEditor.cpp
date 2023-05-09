@@ -11,14 +11,11 @@
 //B.
 TextEditor::TextEditor()  // Class constructor
 {
-//    LineType* header;
-//    LineType* trailer;
+
     header = new LineType;
     trailer = new LineType;
     std::strcpy(header->info, "---Top of file---");
     std::strcpy(trailer->info, "---Bottom of file---");
-//    std::cout << header->info << " ";
-//    std::cout << trailer->info << " ";
     
     header->next = NULL;
     header->back = trailer;
@@ -26,8 +23,6 @@ TextEditor::TextEditor()  // Class constructor
     trailer->back = NULL;
 
     currentLine = header;
-
-
 }
 
 
@@ -35,11 +30,11 @@ TextEditor::~TextEditor() {}
 
 //C.
 void TextEditor::GoToTop() {
-    if (currentLine == header) {
+    if (currentLine == header) { //라인이 없는 경우
         currentLine = trailer;
     }
     else {
-        while (currentLine->next != NULL && !(currentLine->next == header)) {
+        while (currentLine->next != NULL && !(currentLine->next == header)) { //헤더 전에서 멈춰야 함
             currentLine = currentLine->next;
         }
     }
@@ -47,11 +42,11 @@ void TextEditor::GoToTop() {
 }
 
 void TextEditor::GoToBottom() {
-    if (currentLine == header) {
+    if (currentLine == header) { //라인이 없는 경우
         currentLine = header;
     }
     else {
-        while (currentLine->back != NULL && !(currentLine->back == trailer)) {
+        while (currentLine->back != NULL && !(currentLine->back == trailer)) { //trailer 앞에서 멈춰야 함
             currentLine = currentLine->back;
         }
     }

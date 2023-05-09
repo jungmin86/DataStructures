@@ -14,9 +14,9 @@ bool Identical(QueType& queue1, QueType& queue2) {
         queue1.Dequeue(num1);
         queue2.Dequeue(num2);
         if(num1 != num2) return false;
-        else if (queue2.IsEmpty() && !queue1.IsEmpty()) return false;
+        else if (queue2.IsEmpty() && !queue1.IsEmpty()) return false; //q2는 비었으면 끝
     }
-    if (!queue2.IsEmpty()) return false;
+    if (!queue2.IsEmpty()) return false; //아직도 남아있으면 같을 수가 없음
     return true;
 }
 
@@ -33,8 +33,8 @@ int main() {
     q2.Enqueue(1);
     q2.Enqueue(2);
     q2.Enqueue(3);
-    q2.Enqueue(4);
+//    q2.Enqueue(4);
     
     std::cout << Identical(q1, q2);
-    std::cout << q1.Identical(q2);
+//    std::cout << q1.Identical(q2);
 }

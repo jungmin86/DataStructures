@@ -2,7 +2,22 @@
 //  main.cpp
 //  LAB03
 // 2018100233 김정민
-
+//#include <iostream>
+//#include "sorted.h"
+//int main() {
+//    SortedType s;
+//    ItemType i, ii, iii, iiii;
+//    i.Initialize(1);
+//    ii.Initialize(2);
+//    iii.Initialize(3);
+//    iiii.Initialize(1);
+//    s.InsertItem(i);
+//    s.InsertItem(ii);
+//    s.InsertItem(iii);
+//    s.DeleteItem(iiii);
+//    s.Print();
+//
+//}
 
 //// Exercise 6
 
@@ -10,12 +25,6 @@
 //#include "ItemType.h"
 //#include "sorted.h"
 //
-//void SortedType::Print() { //테스트용
-//    for (int i = 0; i < length; i++) {
-//        info[i].Print(std::cout);
-//    }
-//    std::cout << '\n';
-//}
 //
 //int main()
 //{
@@ -34,7 +43,7 @@
 //    item5.Initialize(6); //item을 필요한 만큼 초기화
 //    item6.Initialize(4);
 //    item7.Initialize(2);
-//    item8.Initialize(20);
+//    item8.Initialize(9);
 //    item9.Initialize(8);
 //    item10.Initialize(0);
 //    s_list2.InsertItem(item5); //리스트에 값을 넣는다.
@@ -53,10 +62,10 @@
 ////Pre: List1 and list2 have been initialized and sorted by key members.
 ////      Each list has a different key.
 ////Post: Result is a sorted list which has every element of list1 and list2.
-///Big-O: O(N)
+////Big-O: O(N)
 //{
 //// 리스트의 current position을 초기화 한다.
-//    list1.ResetList();    //O(1)
+//    list1.ResetList();    //O(1) 이걸 하면 -1이 됨
 //    list2.ResetList();    //O(1)
 //    result.ResetList();   //O(1)
 //// list1과 list2의 길이를 LengthIs()함수를 통해 얻는다.
@@ -82,7 +91,7 @@
 #include <iostream>
 using namespace std;
 
-////A.
+//A.
 //int BinarySearch(int array[], int sizeOfArray, int value) {
 //    int midPoint ;
 //    int first = 0;
@@ -99,11 +108,11 @@ using namespace std;
 //        }
 //        else if (array[midPoint] < value) {
 //            first = midPoint + 1;
-//            moreToSearch = (first <= last);
+//            moreToSearch = (first <= last); //first가 바뀌었으니 해줘야 함
 //        }
 //        else if (array[midPoint] > value) {
 //            last = midPoint - 1;
-//            moreToSearch = (first <= last);
+//            moreToSearch = (first <= last); //last가 바뀌었으니 해줘야 함
 //        }
 //    }
 //    return index;
@@ -127,7 +136,7 @@ using namespace std;
 //        else if (array[midPoint] < value) {
 //            first = midPoint + 1;
 //            if (array[first] > value) {
-//                index = first - 1;
+//                index = first - 1; //하나 증가시키니까 바로 역전 ? -> 증가시키기 전이 value 다음으로 작은 수
 //                found = true;
 //            }
 //            moreToSearch = (first <= last);
@@ -135,7 +144,7 @@ using namespace std;
 //        else if (array[midPoint] > value) {
 //            last = midPoint - 1;
 //            if (array[last] < value) {
-//                index = last;
+//                index = last; //하나 감소시켰더니 역전 ? -> 그럼 이 감소한 인덱스가 value 다음으로 작은 수
 //                found = true;
 //            }
 //            moreToSearch = (first <= last);
@@ -178,30 +187,30 @@ int BinarySearch(int array[], int sizeOfArray, int value) {
     }
     return array[index];
 }
-
-
+//
+//
 int main() {
-    //A.
+//    //A.
 //    int list[10] = {1,2,3,4,5,6,7,8,9,10};
 //    int result = BinarySearch(list, sizeof(list)/sizeof(list[0]), 11);
 //    cout << result << endl; // -1 리턴
 //    result = BinarySearch(list, sizeof(list)/sizeof(list[0]), 7);
 //    cout << result << endl; // 6 리턴
 //    return 0;
-    //B.
+//    //B.
 //    int list[10] = {2,4,6,8,10,12,14,16,18,20};
 //    int result = BinarySearch(list, sizeof(list)/sizeof(list[0]), 11);
 //    cout << result << endl; //10 리턴
 //    result = BinarySearch(list, sizeof(list)/sizeof(list[0]), 7);
 //    cout << result << endl; //6 리턴
-    //C.
+//    //C.
     int list[10] = {2,4,6,8,10,12,14,16,18,20};
     int result = BinarySearch(list, sizeof(list)/sizeof(list[0]), 3);
     cout << result << endl; //4 리턴
     result = BinarySearch(list, sizeof(list)/sizeof(list[0]), 17);
     cout << result << endl; //18 리턴
 }
-
+//
 
 
 

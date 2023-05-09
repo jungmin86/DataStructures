@@ -34,7 +34,7 @@
 //      Function: this 객체의 private 멤버인 matrix를 출력한다.
 //      Precondition: n이 matrix의 행열의 길이와 같아야 한다.
 //      Postcondition: this 객체의 matrix를 정사각형 형태로 출력한다.
-
+//
 //#include <iostream>
 //
 //const int MAX_ROWS = 50;
@@ -65,7 +65,7 @@
 //    }
 //};
 //void SquareMatrix::MakeEmpty(const int n) {
-//    if(n>MAX_ROWS) ;
+//    if(n>MAX_ROWS) return;  //예외처리
 //    else {
 //        for(int i = 0; i < n; i++) {
 //            for( int j = 0; j < n; j++) {
@@ -104,30 +104,30 @@
 //
 //int main() {
 //    SquareMatrix s;
-////    s.MakeEmpty(10);
+//    s.MakeEmpty(5);
 //    s.StoreValue(0, 1, 1);
 //    s.StoreValue(3, 2, 1);
-//    s.Print(10);
+//    s.Print(5);
 //    std::cout << '\n';
 //    SquareMatrix ss;
-//    ss.MakeEmpty(10);
+//    ss.MakeEmpty(5);
 //    ss.StoreValue(1, 2, 2);
-//    s.Add(ss, 10);
-//    s.Print(10);
+//    s.Add(ss, 5);
+//    s.Print(5);
 //    std::cout << '\n';
 //    SquareMatrix sss;
-//    sss.MakeEmpty(10);
+//    sss.MakeEmpty(5);
 //    sss.StoreValue(0, 1, 3);
-//    sss.StoreValue(5, 6, 3);
-//    sss.StoreValue(8, 3, 3);
-//    s.Subtract(sss, 10);
-//    s.Print(10);
+//    sss.StoreValue(4, 4, 3);
+//    sss.StoreValue(2, 3, 3);
+//    s.Subtract(sss, 5);
+//    s.Print(5);
 //    std::cout << '\n';
-//    ss.Copy(s, 10);
-//    ss.Print(10);
+//    ss.Copy(s, 5);
+//    ss.Print(5);
 //    std::cout << '\n';
-//    s.Copy(sss, 10);
-//    s.Print(10);
+//    s.Copy(sss, 5);
+//    s.Print(5);
 //    std::cout << '\n';
 //}
 
@@ -136,7 +136,7 @@
 #include <iostream>
 #include <cstring>
 #include "StrType.h"
-#include <fstream>
+//#include <fstream>
 //(a) <cstring>에 있는 strcmp를 사용하여 멤버함수 ComparedTo를 작성하라.
 //RelationType StrType::ComparedTo(StrType& otherString) {
 //    RelationType result;
@@ -147,7 +147,7 @@
 //    return result;
 //}
 
-//(b) strcmp 라이브러리 함수를 사용하지 않고, 멤버 함수 ComparedTo를 작성하라.
+////(b) strcmp 라이브러리 함수를 사용하지 않고, 멤버 함수 ComparedTo를 작성하라.
 RelationType StrType::ComparedTo(StrType& otherString){
     int idx = 0;
     int result;
@@ -171,6 +171,10 @@ int main() {
     std::ifstream ifs1;
     ifs1.open("ex1.txt");
     ss.GetStringFile(true, ALPHA_NUM, ifs1);
+//    char c1[10] = "abcd";
+//    std::cout << std::strlen(c1); //4
+//    char c2[10] = "abc";
     std::cout << s.ComparedTo(ss);
-    
+//    std::cout << std::strcmp(c1, c2);
+
 }

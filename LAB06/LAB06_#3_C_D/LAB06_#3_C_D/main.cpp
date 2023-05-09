@@ -32,8 +32,8 @@ int main(int argc, const char * argv[]) {
     ss.InsertItem(4);
     ss.InsertItem(10);
     ss.InsertItem(6);
-    MergeLists(s, ss, result);
-//    s.MergeLists(ss, result);
+//    MergeLists(s, ss, result);
+    s.MergeLists(ss, result);
     int item;
     result.ResetList();
     for (int iter = 0; iter < result.LengthIs(); iter++) {

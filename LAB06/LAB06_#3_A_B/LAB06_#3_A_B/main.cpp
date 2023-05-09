@@ -44,4 +44,5 @@ int main(int argc, const char * argv[]) {
         result.GetNextItem(item);
         std::cout << item << " ";
     }
+    result.Print();
 }

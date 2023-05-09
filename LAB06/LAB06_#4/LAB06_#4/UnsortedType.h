@@ -195,9 +195,7 @@ void UnsortedType<ItemType>::InsertItem(ItemType item)
 //A.
 //template <class ItemType>
 //void UnsortedType<ItemType>::DeleteItem(ItemType item)
-//// Pre:  item's key has been initialized.
-////       An element in the list has a key that matches item's.
-//// Post: No element in the list has a key that matches item's.
+//
 //{
 //
 //    NodeType<ItemType>* location;
@@ -232,9 +230,6 @@ void UnsortedType<ItemType>::InsertItem(ItemType item)
 //B.
 template <class ItemType>
 void UnsortedType<ItemType>::DeleteItem(ItemType item)
-// Pre:  item's key has been initialized.
-//       An element in the list has a key that matches item's.
-// Post: No element in the list has a key that matches item's.
 {
 
     NodeType<ItemType>* location;
@@ -267,7 +262,6 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
             }
         }
     }
-
 }
 
 template <class ItemType>

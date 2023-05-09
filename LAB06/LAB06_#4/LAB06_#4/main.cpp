@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
     U.InsertItem(3);
 
     U.DeleteItem(3);
-//    U.DeleteItem(2);
+    U.DeleteItem(1);
     
     U.ReversePrint();
 }

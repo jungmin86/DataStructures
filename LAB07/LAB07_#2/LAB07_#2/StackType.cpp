@@ -92,7 +92,6 @@ void StackType::Copy(StackType& anotherStack) {
         }
         ptr2 = NULL;
     }
-    
 }
 
 void StackType::Print() {

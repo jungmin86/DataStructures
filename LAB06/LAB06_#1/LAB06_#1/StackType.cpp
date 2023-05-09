@@ -104,7 +104,6 @@ void StackType::ReplaceItem(ItemType oldItem, ItemType newItem) {
         } else
         {   //location은 다음 노드를 가리킨다
             location = location->next;
-            
         }
     }
 }
