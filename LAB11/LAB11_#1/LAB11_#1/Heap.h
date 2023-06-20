@@ -44,10 +44,10 @@ void HeapType<ItemType>::ReheapUp(int root, int bottom)
 {
     int parent;
     bool reheaped = false;
-    
+
     while (bottom > root && !reheaped) {
         parent = (bottom - 1) / 2;
-        
+
         if (elements[parent] < elements[bottom]) {
             Swap(elements[parent], elements[bottom]);
             bottom = parent;

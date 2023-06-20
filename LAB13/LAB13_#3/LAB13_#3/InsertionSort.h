@@ -3,8 +3,7 @@
 
 
 template<class ItemType>
-void InsertItem(ItemType values[], int startIndex, int
-endIndex)
+void InsertItem(ItemType values[], int startIndex, int endIndex)
 // Post: values[0]..values[endIndex] are now sorted.
 {
   bool finished = false;

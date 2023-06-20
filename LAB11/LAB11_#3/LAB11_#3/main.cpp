@@ -8,7 +8,7 @@
 #include <iostream>
 #include "PQType.h"
 //D. Big-O notation
-//Enqueue : SortedLL의 InsertItem의 Big-O -> O(logN) -> 처음부터 끝까지 들어가야할 곳 찾는 최악의 경우의 수
+//Enqueue : SortedLL의 InsertItem의 Big-O -> O(N) -> 처음부터 끝까지 들어가야할 곳 찾는 최악의 경우의 수
 //Dequeue : 그냥 맨 앞에 있는 가장 큰 수를 빼면 되므로 O(1)
 int main(int argc, const char * argv[]) {
     PQType<int> pq;

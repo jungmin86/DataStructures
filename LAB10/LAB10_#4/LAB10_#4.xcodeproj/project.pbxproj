@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC5BF3662A400A3100D7BB23 /* 1234.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 1234.txt; sourceTree = "<group>"; };
 		ACE5B1232A13E1AD0068170F /* LAB10_#4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "LAB10_#4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE5B1262A13E1AD0068170F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		ACE5B12D2A13E1C00068170F /* TreeType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeType.cpp; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 				ACE5B1392A13ED7B0068170F /* QueType.h */,
 				ACE5B13C2A13EFE10068170F /* SortedType.h */,
 				ACE5B1572A13F9EC0068170F /* 123.txt */,
+				AC5BF3662A400A3100D7BB23 /* 1234.txt */,
 			);
 			path = "LAB10_#4";
 			sourceTree = "<group>";

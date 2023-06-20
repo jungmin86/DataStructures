@@ -68,7 +68,7 @@ void HashTable<ItemType>::RetrieveItem(ItemType& item, bool& found) {
     location = startLoc;
     do
     {
-        if (info[location] == item || info[location] == emptyItem)
+        if (info[location] == item || info[location] == emptyItem) //오버로딩
             moreToSearch = false;
         else
             location = (location + 1) % MAX_ITEMS;

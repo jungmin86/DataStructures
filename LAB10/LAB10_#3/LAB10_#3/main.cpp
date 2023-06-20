@@ -38,5 +38,5 @@ int main(int argc, const char * argv[]) {
     A.InsertItem('p');
     A.InsertItem('a');
     
-    std::cout << Smaller(A, 'g');
+    std::cout << Smaller(A, 'o');
 }

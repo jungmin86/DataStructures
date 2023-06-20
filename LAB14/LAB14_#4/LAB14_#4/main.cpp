@@ -16,18 +16,20 @@ int main(int argc, const char * argv[]) {
     stu[2].InitValue(2005200132, "jeong", 2.7);
     Student emptyitem;
     emptyitem.EmptyKey();
-
-    HashTable<Student> ht(emptyitem);
-    for (int i = 0; i < 3; i++) {
-        ht.InsertItem(stu[i]);
-    }
-    char input[30];
-    cout << "학생의 이름 : ";
-    cin >> input;
-    Student inputitem;
-    inputitem.InitValue(0, input, 0);
-    bool found = false;
-    ht.RetrieveItem(inputitem,found);
-    cout << found << endl;
-    cout << inputitem.getName();
+    stu[0] = stu[1];
+    stu[0].Print(cout);
+//    HashTable<Student> ht(emptyitem);
+//    for (int i = 0; i < 3; i++) {
+//        ht.InsertItem(stu[i]);
+//    }
+//    char input[30];
+//    cout << "학생의 이름 : ";
+//    cin >> input;
+//    Student inputitem;
+//    inputitem.InitValue(0, input, 0);
+//    bool found = false;
+//    ht.RetrieveItem(inputitem,found);
+//    cout << found << endl;
+//    cout << inputitem.getName() << endl;
+    
 }

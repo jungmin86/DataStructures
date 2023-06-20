@@ -12,11 +12,11 @@ bool MatchingItem_Unsorted(TreeType& tree, UnsortedType &list) {
     int list_length = list.LengthIs();
     int tree_length = tree.LengthIs();
     
-    if (list_length != tree_length) return false;
+    if (list_length != tree_length) return false; //일단 길이가 같은지
     else {
         ItemType item;
         bool found;
-        list.ResetList();
+        list.ResetList(); //클라이언트니까 이렇게 하나씩 뽑아야 함
         for (int i = 0; i < list_length; i++) {
             list.GetNextItem(item);
             tree.RetrieveItem(item, found);

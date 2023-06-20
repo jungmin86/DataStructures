@@ -21,7 +21,7 @@ void MakeTree(TreeType& tree, SortedType &list) {
     list.ResetList();
     for (int i = 0; i < length; i++) {
         list.GetNextItem(item_info);
-        array[i] = item_info;
+        array[i] = item_info; //array에 저장
     }
     
     AddElement(tree, array, 0, length-1);
@@ -47,12 +47,13 @@ int main(int argc, const char * argv[]) {
     s.InsertItem(4);
     s.InsertItem(5);
     s.InsertItem(6);
+    s.InsertItem(8);
     s.InsertItem(7);
 
     TreeType T;
     MakeTree(T, s);
-    T.ResetTree(PRE_ORDER);
+    T.ResetTree(IN_ORDER);
     std::ofstream ofs;
-    ofs.open("123.txt");
+    ofs.open("1234.txt");
     T.Print(ofs);
 }

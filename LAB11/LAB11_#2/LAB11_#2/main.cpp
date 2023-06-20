@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
     pq.Enqueue(40);
     int x, y, z;
     //내림차순으로 정의되어있고, Enqueue 혹은 Dequeue해줄 때마다 ReheapUp과 ReheapDown을 수행해서 내림차순을 유지한다.
-    //따라서 Dequeue는 가장 큰 숫자가 반환될 것
+    //따라서 Dequeue는 가장 큰 숫자가 반환될 것 (root가 나옴)
     //56, 42, 40 순으로 Dequeue된다.
     pq.Dequeue(x);
     pq.Dequeue(y);
